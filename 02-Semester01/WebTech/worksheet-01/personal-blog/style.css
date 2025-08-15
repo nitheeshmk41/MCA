@@ -1,0 +1,27 @@
+header{
+    border: 1px black solid;
+    border-radius: 30px;
+}
+
+header h1{
+    text-align: center;
+} 
+header h2,p{
+    margin-left: 10px;
+}
+
+.content{
+    margin-left: 10px;
+}
+
+footer ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+footer ul li{
+    margin-right: 20px;
+    border: 1px red solid;
+    padding: 4px;
+}
