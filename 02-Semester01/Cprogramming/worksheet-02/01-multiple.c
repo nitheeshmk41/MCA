@@ -11,10 +11,9 @@ int main() {
         return 0;
     }
 
-    last = n % 10;  // Last digit
+    last = n % 10;  
     temp = n;
 
-    // Find first digit
     while(temp >= 10) {
         temp /= 10;
     }
@@ -23,7 +22,6 @@ int main() {
     printf("First digit: %d\n", first);
     printf("Last digit: %d\n", last);
 
-    // Check multiples
     if(last != 0 && first % last == 0) {
         printf("First digit is a multiple of the last digit.\n");
     }
