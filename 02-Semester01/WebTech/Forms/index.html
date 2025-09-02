@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms Example</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Online Payment Form</h2>
+      <form>
+        <label for="custName">Customer Name</label>
+        <input
+          type="text"
+          id="custName"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label for="deliveryAddress">Delivery Address</label>
+        <textarea
+          id="deliveryAddress"
+          rows="3"
+          placeholder="Enter delivery address"
+          required
+        ></textarea>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="example@mail.com"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter phone number"
+          required
+        />
+
+        <label for="cardNumber">Card Number</label>
+        <input
+          type="text"
+          id="cardNumber"
+          maxlength="16"
+          placeholder="1234 5678 9012 3456"
+          required
+        />
+
+        <label for="expiry">Expiry Date</label>
+        <input type="month" id="expiry" required />
+
+        <label for="cvv">CVV</label>
+        <input
+          type="password"
+          id="cvv"
+          maxlength="3"
+          placeholder="123"
+          required
+        />
+
+        <label for="billingAddress">Billing Address</label>
+        <textarea
+          id="billingAddress"
+          rows="3"
+          placeholder="Enter billing address"
+          required
+        ></textarea>
+
+        <button type="submit">Make Payment</button>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2>Social Media Registration</h2>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Choose a username"
+          required
+        />
+
+        <label for="regEmail">Email</label>
+        <input
+          type="email"
+          id="regEmail"
+          placeholder="example@mail.com"
+          required
+        />
+
+        <label for="regPhone">Phone Number</label>
+        <input
+          type="tel"
+          id="regPhone"
+          placeholder="Enter phone number"
+          required
+        />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required />
+
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="">--Select--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          required
+        />
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Re-enter password"
+          required
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2>Money Transfer Form</h2>
+      <form>
+        <label for="accountNumber">Account Number</label>
+        <input
+          type="number"
+          id="accountNumber"
+          placeholder="Enter your account number"
+          required
+        />
+
+        <label for="beneficiary">Beneficiary Name</label>
+        <input
+          type="text"
+          id="beneficiary"
+          placeholder="Enter beneficiary name"
+          required
+        />
+
+        <label for="ifsc">IFSC Code</label>
+        <input type="text" id="ifsc" placeholder="e.g. SBIN0001234" required />
+
+        <label for="amount">Transfer Amount (₹)</label>
+        <input type="number" id="amount" placeholder="Enter amount" required />
+
+        <label for="transactionType">Transaction Type</label>
+        <select id="transactionType" required>
+          <option value="">--Select--</option>
+          <option>IMPS</option>
+          <option>NEFT</option>
+          <option>RTGS</option>
+        </select>
+
+        <label for="otp">Transaction Password / OTP</label>
+        <input
+          type="password"
+          id="otp"
+          placeholder="Enter OTP or transaction password"
+          required
+        />
+
+        <button type="submit">Transfer Money</button>
+      </form>
+    </div>
+  </body>
+</html>
