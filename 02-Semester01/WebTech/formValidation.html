@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter Username (5–10 letters):</label>
+        <input type="text" pattern="[A-Za-z]{5,10}"
+            title="Only letters allowed, length 5–10" required>
+        <input type="submit">
+    </form>
+    <form>
+        <label>Enter 4-digit PIN:</label>
+        <input type="text" pattern="[0-9]{4}"
+        title="Enter exactly 4 digits" required>
+        <input type="submit">
+    </form>
+    <form>
+        <label>Email:</label>
+        <input type="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        title="Enter a valid email like name@example.com" required>
+        <input type="submit">
+    </form>
+</body>
+</html>
