@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 - Page Not Found | Bloom Flower Shop</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+  :root {
+    --primary-color: #d9480f;
+    --secondary-color: #f9f0e6;
+    --accent-color: #f67e7d;
+    --text-color: #333;
+    --bg-color: #fff7f2;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  main {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Animated floating flowers */
+  .floating-flower {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.8;
+    animation: floatUpDown 6s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  .floating-flower.left {
+    left: 20px;
+    top: 20vh;
+    animation-delay: 0s;
+  }
+
+  .floating-flower.right {
+    right: 20px;
+    top: 50vh;
+    animation-delay: 3s;
+  }
+
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: var(--primary-color);
+    line-height: 1;
+    user-select: none;
+    position: relative;
+    animation: colorFade 4s ease-in-out infinite alternate;
+  }
+
+  /* Petal animations around the "404" */
+  .petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    filter: drop-shadow(0 0 1px #c7524f);
+    animation: petalSpin 6s linear infinite;
+    opacity: 0.9;
+  }
+
+  /* Different positions & animation delays for petals */
+  .petal1 { top: 10px; left: 40px; animation-delay: 0s; }
+  .petal2 { top: 60px; left: 90px; animation-delay: 2s; }
+  .petal3 { top: 110px; left: 20px; animation-delay: 4s; }
+  .petal4 { top: 140px; left: 80px; animation-delay: 1s; }
+  .petal5 { top: 90px; left: 120px; animation-delay: 3s; }
+
+  @keyframes petalSpin {
+    0% { transform: rotate(0deg) translateX(5px) rotate(0deg);}
+    50% { transform: rotate(180deg) translateX(8px) rotate(-180deg);}
+    100% { transform: rotate(360deg) translateX(5px) rotate(-360deg);}
+  }
+
+  @keyframes colorFade {
+    0% { color: var(--primary-color); }
+    100% { color: var(--accent-color); }
+  }
+
+  .flower {
+    margin: 2rem auto 3rem;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center, #f67e7d 40%, transparent 41%),
+                radial-gradient(circle at 20% 50%, #f9a1a0 30%, transparent 31%),
+                radial-gradient(circle at 80% 50%, #f9a1a0 30%, transparent 31%);
+    border-radius: 50%;
+    position: relative;
+    animation: bloom 2s ease forwards;
+    z-index: 10;
+  }
+
+  .flower::before,
+  .flower::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #f67e7d 40%, transparent 41%);
+    border-radius: 50%;
+    top: 20px;
+  }
+
+  .flower::before {
+    left: -50px;
+    transform: rotate(-30deg);
+  }
+
+  .flower::after {
+    right: -50px;
+    transform: rotate(30deg);
+  }
+
+  @keyframes bloom {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  form {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+    background: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(217, 72, 15, 0.15);
+  }
+
+  input[type="search"] {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 30px 0 0 30px;
+    outline-offset: 2px;
+  }
+
+  input[type="search"]::placeholder {
+    color: #bfa59c;
+  }
+
+  button[type="submit"] {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+    animation: bounce 0.5s ease forwards;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-weight: 600;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    border-color: var(--accent-color);
+  }
+
+  footer {
+    margin-top: auto;
+    font-size: 0.875rem;
+    color: #999;
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+
+    form {
+      flex-direction: column;
+      border-radius: 20px;
+    }
+
+    input[type="search"] {
+      border-radius: 20px 20px 0 0;
+    }
+
+    button[type="submit"] {
+      border-radius: 0 0 20px 20px;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Floating flower images -->
+   <a href="">
+  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3eTFpdjUwdWNrN3IwMGhubXNrZmxleGVrNXpwZDNyaXY1eDFtNmliaCZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/2fM0uyh4wngRjB9ecF/giphy.gif" alt="Floating flower left" class="floating-flower left" aria-hidden="true" />
+  </a>
+  <img src="https://media1.tenor.com/m/vmAUYtK36rMAAAAC/flowers-valentine.gif" alt="Floating flower right" class="floating-flower right" aria-hidden="true" />
+
+  <main role="main" aria-labelledby="page-title">
+    <h1 id="page-title" aria-hidden="true" style="position: relative;">
+      4
+      <!-- Petals around the first 4 -->
+      <span class="petal petal1"></span>
+      <span class="petal petal2"></span>
+      <span class="petal petal3"></span>
+      <span class="petal petal4"></span>
+      <span class="petal petal5"></span>
+      0 4
+    </h1>
+
+    <div class="flower" aria-hidden="true"></div>
+
+    <h2>Oops! Page Not Found</h2>
+    <p>Sorry, the page you're looking for doesn't exist. Try searching for your favorite flowers or check out our popular pages below.</p>
+
+    <form action="/search" method="GET" role="search" aria-label="Search for flowers">
+      <input type="search" name="q" placeholder="Search for flowers..." aria-label="Search input" />
+      <button type="submit" aria-label="Submit search">Search</button>
+    </form>
+
+    <nav aria-label="Helpful links">
+      <a href="/">Home</a>
+      <a href="/shop">Shop</a>
+      <a href="/bouquets">Bouquets</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </main>
+
+  <footer>
+    &copy; 2025 Bloom Flower Shop — Bringing beauty to your door.
+  </footer>
+</body>
+</html>
