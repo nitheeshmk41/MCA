@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form class="about-form">
+    <fieldset class="section personal">
+      <legend>Personal Details</legend>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
+
+      <label for="mname">Middle Name</label>
+      <input type="text" id="mname" name="mname" placeholder="Enter middle name">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" min="1990-01-01" max="2005-01-01" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+    </fieldset>
+
+    <fieldset class="section hobbies">
+      <legend>Hobbies & Skills</legend>
+      <p>Hobbies</p>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="drawing"> Drawing</label>
+        <label><input type="checkbox" name="hobby" value="sports"> Sports</label>
+        <label><input type="checkbox" name="hobby" value="music"> Music</label>
+      </div>
+
+      <p>Skills</p>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="skill" value="programming"> Programming</label>
+        <label><input type="checkbox" name="skill" value="design"> Designing</label>
+        <label><input type="checkbox" name="skill" value="communication"> Communication</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="section residence">
+      <legend>Residence Details</legend>
+      <p>Accommodation</p>
+      <div class="radio-group">
+        <label><input type="radio" name="residence" value="dayscholar" required> Day Scholar</label>
+        <label><input type="radio" name="residence" value="hostel"> Hostel</label>
+        <label><input type="radio" name="residence" value="pg"> PG Hostel</label>
+        <label><input type="radio" name="residence" value="private"> Private Room</label>
+        <label><input type="radio" name="residence" value="rented"> Rented Room/House</label>
+      </div>
+
+      <label for="birthplace">Birth Place</label>
+      <select id="birthplace" name="birthplace" required>
+        <option value="ahmedabad" selected>Ahmedabad</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="chennai">Chennai</option>
+        <option value="delhi">Delhi</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="section about">
+      <legend>About Me</legend>
+      <label for="about">Write About Yourself</label>
+      <textarea id="about" name="about" placeholder="Introduce yourself..." rows="5" required></textarea>
+    </fieldset>
+
+    <button type="submit" title="Click here upon checking the details">Submit</button>
+  </form>
+</body>
+</html>

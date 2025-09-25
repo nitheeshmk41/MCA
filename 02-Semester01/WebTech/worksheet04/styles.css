@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.about-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  width: 600px;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid;
+}
+
+.personal { border-color: #ff6b6b; }
+.hobbies { border-color: #6bcff6; }
+.residence { border-color: #6bff9d; }
+.about { border-color: #f6d36b; }
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 1.1em;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.95em;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+.checkbox-group, .radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 8px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 1em;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3), -4px -4px 10px rgba(255,255,255,0.7);
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
