@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form submmitted successfully</h1>
+    <h2>
+        Welcome : <span id="userName"></span>
+    </h2>
+    <script >
+        let name = sessionStorage.getItem("name");
+        document.getElementById("userName").innerHTML = name;
+    </script>
+</body>
+</html>
