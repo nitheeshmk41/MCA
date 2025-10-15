@@ -31,8 +31,18 @@ void printElements(int arr[], int n, int k) {
 }
 
 int main() {
-    int arr[] = {3, 1, 2, 2, 1, 2, 3, 3};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    printf("Enter n : ");
+    scanf("%d",&n);
+    if(n > 100){
+        printf("'n' Not greater than 100 !!");
+        return 0;
+    }
+    int arr[n];
+    for(int i = 0; i < n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
     int k = 8;
 
     printElements(arr, n, k);
