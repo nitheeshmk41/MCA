@@ -1,11 +1,31 @@
 #include <stdio.h>
+#define MAX 10  
 
-#define MAX 10  // maximum matrix size
+void readMatrix(int n, double A[MAX][MAX]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%lf", &A[i][j]);
+        }
+    }
+}
 
-// Function prototypes
-void readMatrix(int n, double A[MAX][MAX]);
-void printMatrix(int n, double M[MAX][MAX]);
-void decomposeMatrix(int n, double A[MAX][MAX], double B[MAX][MAX], double C[MAX][MAX]);
+void printMatrix(int n, double M[MAX][MAX]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%8.2lf ", M[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void decomposeMatrix(int n, double A[MAX][MAX], double B[MAX][MAX], double C[MAX][MAX]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            B[i][j] = (A[i][j] + A[j][i]) / 2.0;
+            C[i][j] = (A[i][j] - A[j][i]) / 2.0;
+        }
+    }
+}
 
 int main() {
     int n;
@@ -37,33 +57,4 @@ int main() {
     printMatrix(n, C);
 
     return 0;
-}
-
-// Function to read an n×n matrix
-void readMatrix(int n, double A[MAX][MAX]) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%lf", &A[i][j]);
-        }
-    }
-}
-
-// Function to print an n×n matrix
-void printMatrix(int n, double M[MAX][MAX]) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            printf("%8.2lf ", M[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-// Function to compute B (symmetric) and C (skew-symmetric)
-void decomposeMatrix(int n, double A[MAX][MAX], double B[MAX][MAX], double C[MAX][MAX]) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            B[i][j] = (A[i][j] + A[j][i]) / 2.0;
-            C[i][j] = (A[i][j] - A[j][i]) / 2.0;
-        }
-    }
 }
