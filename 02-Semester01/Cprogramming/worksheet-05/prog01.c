@@ -35,7 +35,7 @@ int main(){
             min_sales_id = i+1;
         }
     }
-    avg = total / 2;
+    avg = total / MAX;
     printf("a) Average Sales : %d\n",avg);
     
     // b) Max Sales
