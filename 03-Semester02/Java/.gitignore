@@ -17,6 +17,8 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+03-Semester02.iml
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
