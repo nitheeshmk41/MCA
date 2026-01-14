@@ -1,4 +1,4 @@
-package Worksheet_01.functions;
+package preambleWorksheet_01.functions;
 
 import java.util.Scanner;
 
