@@ -6,7 +6,8 @@ if shape == 'S':
     print("Area of Square:", area)
 elif shape == 'C':
     radius = float(input("Enter radius: "))
-    area = 3.14159 * (radius ** 2.4)
+    pi = 3.14159
+    area = pi * (radius ** 2.0)
     print("Area of Circle:", area)
 else:
     print("Invalid input")
